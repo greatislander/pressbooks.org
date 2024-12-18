@@ -19,22 +19,14 @@ Right click on package.json, select "Show npm Scripts":
 
 In the Database tool window (View → Tool Windows → Database), click the plus symbol, select Data Source → MariaDB. Call the database `Pressbooks Test`, and set the following values:
 
-In the General tab (Tip: Credentials are comming from the `/site/.env` file):
+In the General tab (Tip: Host information is set in lando.yaml and credentials are set in the `.env` file):
 
-- Host: 127.0.0.1 (Port: 3306)
+- Host: 127.0.0.1 (Port: 32777)
 - Authentication: User & Password
 
-Provide the user & password for a user who has database access to your local installation.
-![](/images/database-general.png)
+Provide the user & password for a user who has database access to your local installation. If you are using the default values provided in [local-dev-environment](https://github.com/pressbooks/local-dev-environment/blob/dev/.env.example) this will be wordpress / wordpress
 
-In the SSH/SSL tab:
-
-- Proxy host: pressbooks.test (Port: 22)
-- Proxy user: vagrant
-- Auth type: Key pair (OpenSSH)
-- Private key file: `~/Code/pressbooks-dev/trellis/.vagrant/machines/default/virtualbox/private_key`
-- Make sure the `Parse config file ~/.ssh/config` option is **not** selected
-  ![](/images/database-ssh.png)
+![example PHPStorm database config](/images/PHPStorm_DB.png)
 
 ## Configure Remote PHP Interpreter
 
